@@ -146,10 +146,14 @@ body{
 .banner .banner-main{
     position:relative;
     height:460px;
-    background:url(../images/banner.webp) no-repeat center;
+    /* background:url(../images/banner.webp) no-repeat center; */
     background-size:100% 100%;
 }
-.banner .banner-main::before,.banner-main:after{
+.swiper-container {
+    position: relative;
+    z-index:1;
+} 
+/* .banner .banner-main::before,.banner-main:after{
     content:"";
     position:absolute;
     top:215px;
@@ -159,20 +163,23 @@ body{
     border-left:none;
     border-top:none;
     cursor:pointer;
-}
-.banner .banner-main::before{
+} */
+/* .banner .banner-main::before{
     left:244px;
     transform:rotate(135deg);
-}
-.banner .banner-main::after{
+} */
+/* .banner .banner-main::after{
     right:10px;
     transform:rotate(-45deg);
-}
+} */
 .banner .banner-main ul{
     width:234px;
     height:100%;
     overflow:hidden;
     background:rgba(0,0,0,0.4);
+    z-index:2;
+    position:absolute;
+    top:0px;
 }
 .banner-main ul li a{
     width:100%;
@@ -201,6 +208,23 @@ body{
     border-top:none;
     transform:rotate(-45deg);    
 }
+.swiper-pagination-bullet{
+    width:600px;
+}
+.swiper-pagination{
+    position:absolute;
+    right:504px;
+    bottom:1px;
+    
+}
+.swiper-button-prev:after, .swiper-button-next:after{
+    outline:medium;  
+}
+.swiper-button-prev:after, .swiper-container-rtl .swiper-button-next:after{
+    position:relative;
+    left:236px;
+}
+
 .banner-main ol{
     position:absolute;
     bottom:22px;
